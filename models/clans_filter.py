@@ -1,13 +1,20 @@
-class ClansFilter():
-    name: str
-    warFrequency: str
-    locationId: int
-    minMembers: int
-    maxMembers: int
-    minClanPoints: int
-    minClanLevel: int
-    limit: int
-    after: str
-    before: str
-    labelIds: str
+"""
+Calsh of Clans API - ClansFilter models
+"""
 
+from dataclasses import dataclass
+from typing import Optional
+
+@dataclass
+class ClansFilter:
+    name: Optional[str] = None
+    warFrequency: Optional[str] = None
+    locationId: Optional[int] = None
+    minMembers: Optional[int] = None
+    maxMembers: Optional[int] = None
+    minClanPoints: Optional[int] = None
+    minClanLevel: Optional[int] = None
+    limit: Optional[int] = None
+    after: Optional[str] = None
+    before: Optional[str] = None
+    labelIds: Optional[str] = None
