@@ -62,9 +62,7 @@ def search_clans(clans_filter: clans_filter.ClansFilter):
     url += query_params
 
     response = requests.get(url=url, headers=headers)
-    response_json = response.json()
-    print(response_json)
-    return response_json
+    return response.json()
 
 def get_clan_current_war(clan_tag: str):
     """
