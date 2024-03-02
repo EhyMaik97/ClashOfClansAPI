@@ -16,7 +16,8 @@ def get_clan_current_war_league_group(clan_tag: str):
 
     API: /clans/{clanTag}/currentwar/leaguegroup
     """
-    url = f"{ENDPOINT}/clans/{clan_tag.replace('#', '%23')}/currentwar/leaguegroup"
+    clan_tag_fixed = clan_tag.replace("#", "%23")
+    url = f"{ENDPOINT}/clans/{clan_tag_fixed}/currentwar/leaguegroup"
     print(url)
     response = requests.get(url=url, headers=headers)
     
@@ -62,7 +63,9 @@ def search_clans(clans_filter: clans_filter.ClansFilter):
     url += query_params
 
     response = requests.get(url=url, headers=headers)
-    return response.json()
+    response_json = response.json()
+    print(response_json)
+    return response_json
 
 def get_clan_current_war(clan_tag: str):
     """
