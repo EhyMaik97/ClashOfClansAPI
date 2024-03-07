@@ -4,6 +4,7 @@ Calsh of Clans API - Clans
 import requests
 from models import clans_filter
 from utils.settings import ENDPOINT, define_correct_headers
+from utils.helpers import print_url_and_sleep
 import platform
 from dataclasses import asdict
 
@@ -18,7 +19,7 @@ def get_clan_current_war_league_group(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}/currentwar/leaguegroup"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -31,7 +32,7 @@ def get_clan_war_leagues(war_tag: str):
     """
     war_tag_fixed = war_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clanwarleagues/wars/{war_tag_fixed}"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -44,7 +45,7 @@ def get_clan_warlog(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}/warlog"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -61,10 +62,9 @@ def search_clans(clans_filter: clans_filter.ClansFilter):
         [f"{key}={val}" for key, val in asdict(clans_filter).items() if val is not None]
     )
     url += query_params
-
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     response_json = response.json()
-    print(response_json)
     return response_json
 
 def get_clan_current_war(clan_tag: str):
@@ -75,7 +75,7 @@ def get_clan_current_war(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}/currentwar"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -88,7 +88,7 @@ def get_clan_information(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -101,7 +101,7 @@ def get_clan_list_members(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}/members"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
@@ -114,7 +114,7 @@ def get_clan_capital_raid_season(clan_tag: str):
     """
     clan_tag_fixed = clan_tag.replace("#", "%23")
     url = f"{ENDPOINT}/clans/{clan_tag_fixed}/capitalraidseasons"
-    print(url)
+    print_url_and_sleep(url)
     response = requests.get(url=url, headers=headers)
     
     return response.json()
