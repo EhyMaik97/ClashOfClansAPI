@@ -8,6 +8,7 @@ import platform
 
 headers = define_correct_headers(platform.system())
 
+
 def get_goldpass_information():
     """
     Access information about the current goldpass season

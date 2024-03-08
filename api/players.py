@@ -8,7 +8,8 @@ import platform
 
 headers = define_correct_headers(platform.system())
 
-def verify_player_token(player_tag: str):
+
+def verify_player_token(player_tag: str, api_key: str):
     """
     Verify player API token 
 
@@ -16,10 +17,14 @@ def verify_player_token(player_tag: str):
     """
     player_tag_fixed = player_tag.replace("#", "%23")
     url = f"{ENDPOINT}/players/{player_tag_fixed}/verifytoken"
+    body = {
+        "token": api_key
+    }
     print_url_and_sleep(url)
-    response = requests.get(url=url, headers=headers)
+    response = requests.post(url=url, headers=headers, json=body)
     
     return response.json()
+
 
 def get_player_information(player_tag: str):
     """

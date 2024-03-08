@@ -24,6 +24,7 @@ def get_clan_current_war_league_group(clan_tag: str):
     
     return response.json()
 
+
 def get_clan_war_leagues(war_tag: str):
     """
     Retrieve information about individual clan war league war
@@ -37,6 +38,7 @@ def get_clan_war_leagues(war_tag: str):
     
     return response.json()
 
+
 def get_clan_warlog(clan_tag: str):
     """
     Retrieve clan's clan war log
@@ -49,6 +51,7 @@ def get_clan_warlog(clan_tag: str):
     response = requests.get(url=url, headers=headers)
     
     return response.json()
+
 
 def search_clans(clans_filter: clans_filter.ClansFilter):
     """
@@ -67,6 +70,7 @@ def search_clans(clans_filter: clans_filter.ClansFilter):
     response_json = response.json()
     return response_json
 
+
 def get_clan_current_war(clan_tag: str):
     """
     Retrieve information about clan's current clan war
@@ -79,6 +83,7 @@ def get_clan_current_war(clan_tag: str):
     response = requests.get(url=url, headers=headers)
     
     return response.json()
+
 
 def get_clan_information(clan_tag: str):
     """
@@ -93,6 +98,7 @@ def get_clan_information(clan_tag: str):
     
     return response.json()
 
+
 def get_clan_list_members(clan_tag: str):
     """
     List clan members
@@ -105,6 +111,7 @@ def get_clan_list_members(clan_tag: str):
     response = requests.get(url=url, headers=headers)
     
     return response.json()
+
 
 def get_clan_capital_raid_season(clan_tag: str):
     """
