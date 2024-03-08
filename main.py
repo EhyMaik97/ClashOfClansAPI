@@ -28,35 +28,29 @@ def main():
             case '1':
                 """Clans"""
                 show_clans_menu()
-                method_clan_choice = input("#> ")
-                manage_clans_chioice(method_clan_choice)
+                manage_clans_chioice(input("#> "))
             case '2':
                 """E-Sports"""
                 return print("No Documentation for E-Sports API call")
             case '3':
                 show_goldpass_menu()
-                method_goldpass_choice = input("#> ")
-                manage_goldpass_chioice(method_goldpass_choice)
+                manage_goldpass_chioice(input("#> "))
             case '4':
                 """Labels"""
                 show_labels_menu()
-                method_players_choice = input("#> ")
-                manage_labels_chioice(method_players_choice)
+                manage_labels_chioice(input("#> "))
             case '5':
                 """Leagues"""
                 show_leagues_menu()
-                method_players_choice = input("#> ")
-                manage_leagues_chioice(method_players_choice)
+                manage_leagues_chioice(input("#> "))
             case '6':
                 """Locations"""
                 show_locations_menu()
-                method_locations_choice = input("#> ")
-                manage_locations_chioice(method_locations_choice)
+                manage_locations_chioice(input("#> "))
             case '7':
                 """Players"""
                 show_players_menu()
-                method_players_choice = input("#> ")
-                manage_players_chioice(method_players_choice)
+                manage_players_chioice(input("#> "))
             case '0':
                 print("Exit.")
                 break
