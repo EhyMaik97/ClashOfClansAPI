@@ -4,7 +4,8 @@ Calsh of Clans API - API menus
 
 
 def show_main_menu():
-    print("Choose a Service:")
+    print("Welcome to the Clash of Clans API Terminal Interface!:")
+    print("Choose a service for interact with CoC API:")
     print("1. Clans")
     print("2. Esports")
     print("3. Goldpass")
