@@ -31,7 +31,7 @@ def main():
                 manage_clans_chioice(input("#> "))
             case '2':
                 """E-Sports"""
-                return print("No Documentation for E-Sports API call")
+                print("No Documentation for E-Sports API call")
             case '3':
                 show_goldpass_menu()
                 manage_goldpass_chioice(input("#> "))
