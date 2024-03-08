@@ -1,45 +1,65 @@
 """
 Clash of Clans API - main
 """
-import importlib.util
-from api import clans, esports, goldpass, labels, leagues, locations, players
-from utils.helpers import get_methods_from_module, show_methods_menu, show_menu
+from utils.api_menus import (
+    show_main_menu, 
+    show_clans_menu, 
+    show_goldpass_menu, 
+    show_players_menu, 
+    show_labels_menu,
+    show_locations_menu,
+    show_leagues_menu
+)
+from utils.method_menus import (
+    manage_clans_chioice, 
+    manage_goldpass_chioice, 
+    manage_players_chioice, 
+    manage_labels_chioice,
+    manage_locations_chioice,
+    manage_leagues_chioice
+)
 
+#Clan tag #2G9JQRUJR
+#Palyer tag #2LYUJ82G9
 
 def main():
     while True:
-        show_menu()
+        show_main_menu()
         choice = input("#> ")
 
         match choice:
             case '1':
                 """Clans"""
-                methods = get_methods_from_module("clans")
-                show_methods_menu(methods)
-                method_choice = input("Select a clans method: ")
-                try:
-                    selected_method = methods[int(method_choice) - 1]
-                except (IndexError, ValueError):
-                    print("Invalid choice.")
+                show_clans_menu()
+                method_clan_choice = input("#> ")
+                manage_clans_chioice(method_clan_choice)
             case '2':
                 """E-Sports"""
-                return "No Documentation for E-Sports API call"
+                return print("No Documentation for E-Sports API call")
             case '3':
-                """Goldpass"""
-                return "Coming Soon"
+                show_goldpass_menu()
+                method_goldpass_choice = input("#> ")
+                manage_goldpass_chioice(method_goldpass_choice)
             case '4':
                 """Labels"""
-                return "Coming Soon"
+                show_labels_menu()
+                method_players_choice = input("#> ")
+                manage_labels_chioice(method_players_choice)
             case '5':
                 """Leagues"""
-                return "Coming Soon"
+                show_leagues_menu()
+                method_players_choice = input("#> ")
+                manage_leagues_chioice(method_players_choice)
             case '6':
                 """Locations"""
-                return "Coming Soon"
+                show_locations_menu()
+                method_locations_choice = input("#> ")
+                manage_locations_chioice(method_locations_choice)
             case '7':
                 """Players"""
-                pass
-                # get_players_method()
+                show_players_menu()
+                method_players_choice = input("#> ")
+                manage_players_chioice(method_players_choice)
             case '0':
                 print("Exit.")
                 break
