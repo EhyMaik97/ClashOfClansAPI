@@ -21,8 +21,8 @@ This project implements a simple terminal interface for interacting with the Cla
 
 ### Usage
 
-1. Login on https://developer.clashofclans.com and from the accoun create the API key with your IP
-2. Go on setting.py
+1. Login on https://developer.clashofclans.com and from the account, create the API key with your IP
+2. Go on _utils/setting.py_ and set the API_TOKEN created in 1.
 1. Open a terminal and navigate to the directory containing the Python script.
 2. Run the script using `python main.py`.
 3. Follow the on-screen instructions to interact with the API.
