@@ -5,7 +5,6 @@ import time
 
 
 def print_url_and_sleep(url: str):
-
     """
     Takes a url string as input, print a sending message
     and wait 2 seconds.

@@ -72,5 +72,4 @@ def show_leagues_menu():
     print("8. Get league seasons")
     print("9. Get war league informations")
     print("10. Get lsit war leagues")
-
     print("0. Exit")
