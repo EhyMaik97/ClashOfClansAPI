@@ -3,13 +3,12 @@ Calsh of Clans API - Clans
 """
 import requests
 from models import clans_filter
-from utils.settings import ENDPOINT, define_correct_headers
+from utils.settings import ENDPOINT, get_headers
 from utils.helpers import print_url_and_sleep
-import platform
 from dataclasses import asdict
 
+headers = get_headers()
 
-headers = define_correct_headers(platform.system())
 
 def get_clan_current_war_league_group(clan_tag: str):
     """

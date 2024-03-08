@@ -2,11 +2,10 @@
 Calsh of Clans API - Players
 """
 import requests
-from utils.settings import ENDPOINT, define_correct_headers
+from utils.settings import ENDPOINT, get_headers
 from utils.helpers import print_url_and_sleep
-import platform
 
-headers = define_correct_headers(platform.system())
+headers = get_headers()
 
 
 def verify_player_token(player_tag: str, api_key: str):

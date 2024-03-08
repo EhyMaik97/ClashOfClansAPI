@@ -2,12 +2,11 @@
 Calsh of Clans API - Locations
 """
 import requests
-from utils.settings import ENDPOINT, define_correct_headers
+from utils.settings import ENDPOINT, get_headers
 from utils.helpers import print_url_and_sleep
 import platform
 
-headers = define_correct_headers(platform.system())
-
+headers = get_headers()
 
 def get_clan_rankings_for_location(location_id: str):
     """
