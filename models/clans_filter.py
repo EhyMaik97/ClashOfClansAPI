@@ -13,7 +13,7 @@ class ClansFilter:
     minMembers: Optional[int] = None
     maxMembers: Optional[int] = None
     minClanPoints: Optional[int] = None
-    minClanLevel: Optional[int] = None
+    maxClanLevel: Optional[int] = None
     limit: Optional[int] = None
     after: Optional[str] = None
     before: Optional[str] = None
