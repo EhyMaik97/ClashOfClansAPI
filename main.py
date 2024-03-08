@@ -19,9 +19,6 @@ from utils.method_menus import (
     manage_leagues_chioice
 )
 
-#Clan tag #2G9JQRUJR
-#Palyer tag #2LYUJ82G9
-
 def main():
     while True:
         show_main_menu()
