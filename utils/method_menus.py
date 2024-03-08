@@ -35,17 +35,17 @@ def manage_clans_chioice(chosen_method):
             print("Enter the number of max members (or nothing)")
             max_members = input("#> ")
             print("Enter the number of min clan points (or nothing)")
+            min_clan_points = input("#> ")
+            print("Enter the number of min clan level (or nothing)")
             min_clan_level = input("#> ")
-            print("Enter the number of max clan points (or nothing)")
-            max_clan_level = input("#> ")
             filter = {
                 "name": clan_name or None,
                 "warFrequency": war_frequency or None,
                 "locationId": location_id or None,
                 "minMembers": min_members or None,
                 "maxMembers": max_members or None,
-                "minClanPoints": min_clan_level or None,
-                "maxClanLevel": max_clan_level or None,
+                "minClanPoints": min_clan_points or None,
+                "minClanLevel": min_clan_level or None,
             }       
             print(clans.search_clans(ClansFilter(filter)))
         case '5':
